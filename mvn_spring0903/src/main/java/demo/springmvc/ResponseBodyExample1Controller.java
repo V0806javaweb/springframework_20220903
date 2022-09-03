@@ -12,6 +12,7 @@ public class ResponseBodyExample1Controller {
     @RequestMapping(value = "/saveResult")
     @ResponseBody
     public String authorInfo(Model model) {
-        return "saved";
+    	//回傳的是一段字串，而非一整個jsp畫面
+        return "return a string bit not a jsp";
     }     
 }
