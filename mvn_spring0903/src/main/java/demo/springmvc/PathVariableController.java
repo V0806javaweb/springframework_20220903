@@ -11,7 +11,7 @@ public class PathVariableController {
     public String documentView(Model model,
             @PathVariable(value = "sitePrefix") String sitePrefix,
             @PathVariable(value = "language") String language,
-            @PathVariable(value = "id") Long id,
+            @PathVariable(value = "id") String id,
             @PathVariable(value = "naturalText") String naturalText) {
  
         model.addAttribute("sitePrefix", sitePrefix);
@@ -20,7 +20,7 @@ public class PathVariableController {
         model.addAttribute("naturalText", naturalText);
  
         String documentName = "Java tutorial for Beginners";
-        if(id == 8080) {
+        if(id.equals("8080")) {
             documentName = "Spring MVC for Beginners";
         }
  
